@@ -42,10 +42,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="absolute bg-white inset-y-0 left-0 z-50 rounded-2xl h-auto my-6 md:my-10 lg:my-12 -ml-6 sm:-ml-12 lg:-ml-16 w-12 sm:w-20 md:w-24 lg:w-32 shadow-kbl px-1 sm:px-2 py-2 md:p-2 lg:py-3 text-xs">
-                    <img class="mx-auto lg:mb-6 w-3 h-3 sm:w-4 sm:h-4 md:w-6 md:h-6 lg:w-8 lg:h-8" src="@/assets/img/success.png">
-                    <p class="text-center text-3xs sm:text-xs md:text-sm lg:text-base my-1 sm:my-2 md:mt-3 md:mb-2 lg:mt-4 lg:mb-3">Langsung ada hasilnya!</p>
-                    <img class="mx-auto w-8 h-8 sm:w-12 sm:h-12 md:w-16 md:h-16 lg:w-20 lg:h-20" src="@/assets/img/statistics.png">
+                <div class="absolute flex items-center inset-y-0 left-0 h-full -ml-6 sm:-ml-12 lg:-ml-16 text-xs">
+                    <div class="bg-white rounded-2xl h-auto w-12 sm:w-20 md:w-24 lg:w-32 shadow-kbl p-2 md:p-3 lg:p-4 ">
+                        <img class="mx-auto lg:mb-6 w-3 h-3 sm:w-4 sm:h-4 md:w-6 md:h-6 lg:w-8 lg:h-8" src="@/assets/img/success.png">
+                        <p class="text-center text-3xs sm:text-xs md:text-sm lg:text-base my-1 sm:my-2 md:mt-3 md:mb-2 lg:mt-4 lg:mb-3">Langsung ada hasilnya!</p>
+                        <img class="mx-auto w-8 h-8 sm:w-12 sm:h-12 md:w-16 md:h-16 lg:w-20 lg:h-20" src="@/assets/img/statistics.png">
+                    </div>
                 </div>
                 <div class="absolute bg-white top-0 right-0 rounded-md w-2/3 sm:w-1/2 md:w-1/2 shadow-lg py-1 px-2 md:py-2 md:px-4 xl:py-3 xl:px-5 -mt-10 sm:-mt-10 xl:-mt-8 -mr-6 sm:-mr-10 lg:-mr-20 xl:-mr-16 flex items-center text-xs sm:text-sm md:text-base lg:text-lg">
                     <div>Belajar dan kosultasi selamanya hanya cukup sekali bayar saja!</div>
