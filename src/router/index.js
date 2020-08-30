@@ -10,16 +10,17 @@ const routes = [
         name: 'index',
         component: Index
     },
-    // {
-    //     path: '/about',
-    //     name: 'About',
-    //     component: () => import('../views/About.vue')
-    // }
+    {
+        path: '/kelas',
+        name: 'kelas',
+        component: () => import('../views/Kelas')
+    }
 ]
 
 const router = new VueRouter({
     mode: 'history',
     base: process.env.BASE_URL,
+    linkActiveClass: 'text-green-700',
     routes
 })
 
