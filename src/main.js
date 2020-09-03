@@ -4,7 +4,9 @@ import router from './router'
 import store from './store'
 import '@/assets/css/style.css'
 import VueScreenSize from 'vue-screen-size'
+import SlideUpDown from 'vue-slide-up-down'
 Vue.use(VueScreenSize)
+Vue.component("slide-up-down", SlideUpDown)
 
 Vue.config.productionTip = false
 

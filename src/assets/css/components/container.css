@@ -1,0 +1,42 @@
+.container-content {
+    @apply px-5 -mt-20;
+}
+
+.container-title {
+    @apply text-3xl mb-5 tracking-wide font-black
+}
+
+.section-title {
+    @apply font-semibold text-3xl text-center mb-5
+}
+
+.section-subtitle {
+    @apply text-center mb-10 text-sm leading-8
+}
+
+@screen sm {
+    .container-content {
+        @apply px-10
+    }
+}
+
+@screen md {
+    .container-title {
+        @apply text-2xl;
+    }
+    .container-content {
+        @apply px-10;
+    }
+    .container-title {
+        @apply text-4xl text-center
+    }
+    .section-subtitle {
+        @apply text-base px-20
+    }
+}
+
+@screen xl {
+    .container-content {
+        @apply px-64;
+    }
+}
