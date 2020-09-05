@@ -143,13 +143,13 @@
                     </li>
                 </ul>
                 <hr class="border-t border-gray-400 my-5">
-                <a   
-                    :href="$router.resolve({ name: 'checkout', params: { 
-                        kelasSlug: 'membuat-bakso-enak-dan-lezat' 
-                    } }).href"
+                <router-link   
+                    :to="{ name: 'checkout', params: {
+                        kelasSlug: 'membuat-bakso-enak-dan-lezat'
+                    } }"
                 >
                     <button class="w-full bg-blue-600 hover:bg-blue-700 text-gray-100 py-2 rounded">BELI SEKARANG</button>
-                </a>
+                </router-link>
             </div>
         </section>
         <modal :toggleModal="toggleModal" :image="image" @close-modal="toggleModal = false"></modal>

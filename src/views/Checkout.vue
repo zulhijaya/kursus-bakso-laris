@@ -1,7 +1,7 @@
 <template>
     <div class="text-gray-800 text-sm md:text-base">
-        <section name="main" class="px-5 sm:px-10 lg:px-24 xl:px-64 py-16 md:py-20 bg-kbl">
-            <div class="font-black text-center text-3xl md:text-4xl mb-10">
+        <section name="main" class="px-5 sm:px-10 lg:px-24 xl:px-64 py-16 md:py-20 main-bg">
+            <div class="font-black text-center text-3xl md:text-4xl mb-16 text-white">
                 <h1>Checkout Kelas</h1>
                 <h1>Membuat Bakso Enak dan Lezat</h1>
             </div>
@@ -64,7 +64,7 @@
                             <p class="font-semibold text-base">6282238415331</p>
                         </div>
                     </div>
-                    <button class="bg-kbl hover:bg-green-400 font-semibold tracking-wide py-5 w-full rounded-b-lg">KONFIRMASI PEMBAYARAN</button>
+                    <button class="bg-blue-600 hover:bg-blue-700 font-semibold tracking-wide py-5 w-full rounded-b-lg text-white">KONFIRMASI PEMBAYARAN</button>
                 </div>
             </div>
         </section>

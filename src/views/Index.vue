@@ -88,7 +88,7 @@
             </div>
         </section>
 
-        <main class="container-content mt-40">
+        <main class="bg-white container-content mt-40">
             <section class="mb-24 xl:mb-32">
                 <h3 class="font-semibold text-lg md:text-xl lg:text-2xl mb-5">Didukung Oleh :</h3>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-y-3 md:gap-x-5 text-base md:text-lg">
@@ -102,12 +102,12 @@
                 <h3 class="section-title">Belajar Lebih Terarah</h3>
                 <p class="section-subtitle">Mulai usaha dari 0, hingga miliki banyak Outlet. Dapatkan jalan pintas terbaik untuk memulai berwirausaha Bakso</p>
                 <div class="flex justify-center">
-                    <a 
-                        :href="$router.resolve({ name: 'kelas.index' }).href" 
+                    <router-link 
+                        :to="{ name: 'kelas.index' }" tag="button"
                         class="rounded px-5 py-3 text-base md:text-lg text-white bg-blue-600 focus:outline-none hover:bg-blue-700 transition-all duration-150 ease-in-out"
                     >
                         ARAHKAN SAYA
-                    </a>
+                    </router-link>
                 </div>
             </section>
 
@@ -115,10 +115,10 @@
                 <h3 class="section-title">Kelas Popular</h3>
                 <p class="section-subtitle">Materi telah didesain berdasarkan kebutuhan membangun sebuah wirausaha</p>
                 <div class="grid grid-cols-1 gap-y-5 md:grid-cols-2 lg:grid-cols-3 gap-x-5 lg:gap-x-8 lg:gap-y-8 px-5 md:px-0 xl:px-20">
-                    <a 
-                        :href="$router.resolve({ name: 'kelas.show', params: { 
-                            kelasSlug: 'membuat-bakso-enak' 
-                        } }).href" 
+                    <router-link 
+                        :to="{ name: 'kelas.show', params: {
+                            kelasSlug: 'membuat-bakso-enak-dan-lezat'
+                        } }"
                         v-for="n in 3" :key="n" 
                         class="kelas group rounded-lg p-4 bg-white border border-gray-400 hover:shadow-lg transition-all duration-300 ease-in-out"
                         @mouseover="showEye($event)"
@@ -149,7 +149,7 @@
                                 <p class="text-xs md:text-sm">Pemilik Bakso Ngangenin</p>
                             </div>
                         </div>
-                    </a>
+                    </router-link>
                 </div>
             </section>
 
