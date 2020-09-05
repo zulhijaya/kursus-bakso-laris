@@ -1,9 +1,13 @@
 .container-content {
-    @apply px-5 -mt-20;
+    @apply px-5
 }
 
 .container-title {
-    @apply text-3xl mb-5 tracking-wide font-black
+    @apply text-3xl mb-5 tracking-wide font-black text-white
+}
+
+.container-subtitle {
+    @apply text-base text-white text-center mt-12 mb-5 leading-8
 }
 
 .section-title {
@@ -21,21 +25,33 @@
 }
 
 @screen md {
-    .container-title {
-        @apply text-2xl;
-    }
     .container-content {
-        @apply px-10;
+        @apply px-16;
     }
     .container-title {
         @apply text-4xl text-center
+    }
+    .container-subtitle {
+        @apply text-lg mt-16 mb-8
     }
     .section-subtitle {
         @apply text-base px-20
     }
 }
 
+@screen lg { 
+    .container-subtitle {
+        @apply px-40
+    }
+    .container-content {
+        @apply px-10;
+    }
+}
+
 @screen xl {
+    .container-subtitle {
+        @apply px-0
+    }
     .container-content {
         @apply px-64;
     }

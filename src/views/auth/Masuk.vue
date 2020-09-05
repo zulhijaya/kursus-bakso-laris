@@ -1,14 +1,14 @@
 <template>
     <div class="flex justify-center text-gray-800">
         <div class="form-auth-card">
-            <h1 class="form-auth-title">MASUK</h1>
+            <h1 class="form-auth-title">Masuk</h1>
             <p class="text-center text-gray-600">
                 Atau belum punya akun? 
-                <span class="text-blue-500 font-semibold hover:text-blue-600">
+                <span class="text-blue-500 hover:text-blue-600">
                     <router-link :to="{ name: 'daftar' }">Daftar dulu</router-link>
                 </span>
             </p>
-            <form action="#" class="mt-5">
+            <form action="#" class="mt-10">
                 <div class="mb-4">
                     <label for="email" class="inline-block mb-1">Email :</label>
                     <input type="text" name="email" id="email" class="form-input" placeholder="masukkan email">
@@ -17,9 +17,9 @@
                     <label for="password" class="inline-block mb-1">Password :</label>
                     <input type="text" name="password" id="password" class="form-input" placeholder="masukkan password">
                 </div>
-                <p class="text-blue-500 text-right py-4 font-semibold hover:text-blue-600 cursor-pointer">Lupa password?</p>
+                <p class="text-blue-500 text-right py-4 hover:text-blue-600 cursor-pointer">Lupa password?</p>
                 <button type="submit" class="form-auth-button bg-kbl">
-                    Masuk
+                    Masuk Akun Saya
                 </button>
             </form>
         </div>

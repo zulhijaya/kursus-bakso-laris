@@ -4,18 +4,17 @@
 
         <router-view></router-view>
 
-        <footer v-show="showNavigationFooter" class="text-center py-5 text-sm md:text-base bg-blue-700 text-white">
-            2020 Hak Cipta di Lindungi Kursus Bakso Laris
-        </footer>
+        <app-footer v-show="showNavigationFooter"></app-footer>
     </div>
 </template>
 
 <script>
 import Navigation from '@/components/Navigation'
+import AppFooter from '@/components/Footer'
 
 export default {
     components: {
-        Navigation
+        Navigation, AppFooter
     },
 
     computed: {

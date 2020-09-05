@@ -1,5 +1,5 @@
 <template>
-    <nav class="bg-white block lg:flex items-center lg:px-5 xl:px-56 py-4 text-sm md:text-base border-b border-gray-400">
+    <nav class="bg-white block lg:flex items-center lg:px-5 xl:px-10 py-4 text-sm md:text-base border-b border-gray-400">
         <div class="flex items-center justify-between px-4 md:px-5 lg:px-0 w-auto text-gray-800" :class="[ toggleNavigation ? 'pb-3 border-b border-gray-400' : '' ]">
             <router-link exact :to="{ name: 'index' }" class="font-semibold text-lg md:text-xl truncate">KURSUS BAKSO LARIS</router-link>
             <div><i @click="toggleNavigation = !toggleNavigation" class="fas fa-bars text-2xl lg:hidden"></i></div>
@@ -16,32 +16,44 @@
                     Biaya Belajar
                 </router-link>
             </div>
-            <!-- <div class="flex items-center px-4 md:px-5 lg:px-0 pt-4 lg:pt-0">
-                <router-link :to="{ name: 'masuk' }" tag="button" class="px-5 py-2 lg:py-1 rounded-md w-full lg:w-auto border border-gray-500 hover:bg-green-400 hover:text-gray-900 focus:outline-none mr-2">
+            <div class="flex items-center px-4 md:px-5 lg:px-0 pt-4 lg:pt-0">
+                <router-link :to="{ name: 'masuk' }" tag="button" class="px-5 py-2 lg:py-2 rounded w-full lg:w-auto border border-gray-400 hover:bg-orange-600 hover:text-white focus:outline-none mr-3">
                     Masuk
                 </router-link>
-                <router-link :to="{ name: 'daftar' }" tag="button" class="px-5 py-2 lg:py-1 rounded-md w-full lg:w-auto border border-gray-500 hover:bg-green-400 hover:text-gray-900 focus:outline-none">
+                <router-link :to="{ name: 'daftar' }" tag="button" class="px-5 py-2 lg:py-2 rounded w-full lg:w-auto border border-gray-400 hover:bg-orange-600 hover:text-white focus:outline-none">
                     Daftar
                 </router-link>
-            </div> -->
+            </div>
             <div class="px-4 md:px-5 lg:px-0 pt-4 lg:pt-0">
                 <div @mouseover="showUserOption = true" @mouseleave="showUserOption = false" class="flex items-center cursor-pointer mb-3 lg:mb-0">
-                    <img src="@/assets/img/avatar.png" alt="avatar" class="w-12 h-12 rounded-full mr-3">
+                    <img src="@/assets/img/avatar.png" alt="avatar" class="w-10 h-10 rounded-full mr-3">
                     <div>Patricia<i class="fas fa-caret-down ml-2 hidden lg:inline"></i></div>
                 </div>
                 <div
                     v-show="toggleNavigation || showUserOption" 
                     @mouseover="showUserOption = true" 
                     @mouseleave="showUserOption = false" 
-                    class="block lg:absolute w-full lg:w-48 lg:top-0 lg:right-0 lg:mt-12"
+                    class="block lg:absolute w-full lg:w-48 lg:top-0 lg:right-0 lg:mt-10"
                 >
-                    <ul class="bg-white lg:rounded-md lg:p-4 text-sm md:text-base lg:overflow-y-auto lg:shadow-lg lg:border lg:border-gray-300">
+                    <ul class="bg-white lg:rounded-lg lg:p-4 text-sm md:text-base lg:overflow-y-auto lg:shadow-lg lg:border lg:border-gray-300 transition duration-1000 ease-in-out">
                         <li class="font-semibold hidden lg:inline-block mb-3">Profil</li>
-                        <li class="mb-3 hover:text-green-400 cursor-pointer">Lihat Profil</li>
-                        <router-link :to="{ name: 'user.edit.profil' }" tag="li" class="mb-3 hover:text-green-400 cursor-pointer">Edit Profil</router-link>
-                        <router-link :to="{ name: 'user.reset.password' }" tag="li" class="mb-3 hover:text-green-400 cursor-pointer">Ganti Password</router-link>
+                        <router-link :to="{ name: 'user.profil' }" exact tag="li" class="mb-3 hover:text-blue-600 cursor-pointer">
+                            Liat Profil
+                        </router-link>
+                        <router-link :to="{ name: 'user.editProfil' }" tag="li" class="mb-3 hover:text-blue-600 cursor-pointer">
+                            Edit Profil
+                        </router-link>
+                        <router-link :to="{ name: 'user.kelas' }" tag="li" class="mb-3 hover:text-blue-600 cursor-pointer">
+                            Kelas Saya
+                        </router-link>
+                        <router-link :to="{ name: 'user.karya' }" tag="li" class="mb-3 hover:text-blue-600 cursor-pointer">
+                            Karya Saya
+                        </router-link>
+                        <router-link :to="{ name: 'user.resetPassword' }" tag="li" class="mb-3 hover:text-blue-600 cursor-pointer">
+                            Ganti Password
+                        </router-link>
                         <hr class="border-t border-gray-400 hidden lg:block my-2">
-                        <li class="mt-2 md:my-1 hover:text-green-400 cursor-pointer">Keluar</li>
+                        <li class="mt-2 md:my-1 hover:text-blue-600 cursor-pointer">Keluar</li>
                     </ul>
                 </div>
             </div>

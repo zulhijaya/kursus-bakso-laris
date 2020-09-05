@@ -17,7 +17,7 @@ const routes = [
         component: () => import('../views/kelas/Index')
     },
     {
-        path: '/kelas/:slug',
+        path: '/kelas/:kelasSlug',
         name: 'kelas.show',
         component: () => import('../views/kelas/Show')
     },
@@ -42,21 +42,46 @@ const routes = [
         component: () => import('../views/auth/Daftar')
     },
     {
+        path: '/checkout/:kelasSlug',
+        name: 'checkout',
+        component: () => import('../views/Checkout'),
+    },
+    {
         path: '/user',
         component: UserIndex,
         children: [
             {
+                path: '',
+                name: 'user.profil',
+                component: () => import('../views/user/Profil')
+            },
+            {
                 path: 'reset-password',
-                name: 'user.reset.password',
-                component: () => import('../views/user/Dashboard')
+                name: 'user.resetPassword',
+                component: () => import('../views/user/ResetPassword')
             },
             {
                 path: 'edit-profil',
-                name: 'user.edit.profil',
+                name: 'user.editProfil',
                 component: () => import('../views/user/EditProfil')
-            }
+            },
+            {
+                path: 'kelas',
+                name: 'user.kelas',
+                component: () => import('../views/user/Kelas'),
+            },
+            {
+                path: 'karya',
+                name: 'user.karya',
+                component: () => import('../views/user/Karya'),
+            },
         ]
-    }
+    },
+    {
+        path: '/kelas/:kelasSlug/:judulSlug',
+        name: 'kelas.putarKelas',
+        component: () => import('../views/kelas/PutarKelas'),
+    },
 ]
 
 const router = new VueRouter({
